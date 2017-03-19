@@ -4,53 +4,53 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import th.co.ais.cpac.cl.batch.ConstantsBatchReceiveResult;
+import th.co.ais.cpac.cl.batch.ConstantsBusinessUtil;
 
 public class Utility {
 	public static String getusername(String jobType) {
-		if (ConstantsBatchReceiveResult.suspendJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.suspendUsername;
-		} else if (ConstantsBatchReceiveResult.terminateJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.terminateUsername;
-		} else if (ConstantsBatchReceiveResult.reconnectJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.reconnectUsername;
-		} else if (ConstantsBatchReceiveResult.waiveBatchJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.waiveBatchUsername;
-		} else if (ConstantsBatchReceiveResult.writeOffJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.writeOffUsername;
-		} else if (ConstantsBatchReceiveResult.blacklistJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.blacklistUsername;
+		if (ConstantsBusinessUtil.suspendJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.suspendUsername;
+		} else if (ConstantsBusinessUtil.terminateJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.terminateUsername;
+		} else if (ConstantsBusinessUtil.reconnectJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.reconnectUsername;
+		} else if (ConstantsBusinessUtil.waiveBatchJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.waiveBatchUsername;
+		} else if (ConstantsBusinessUtil.writeOffJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.writeOffUsername;
+		} else if (ConstantsBusinessUtil.blacklistJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.blacklistUsername;
 		} else {
 			return "undefined";
 		}
 	}
 
 	public static int getActionID(String jobType) {
-		if (ConstantsBatchReceiveResult.suspendJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.suspendOrderActionID;
-		} else if (ConstantsBatchReceiveResult.terminateJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.terminateOrderActionID;
-		} else if (ConstantsBatchReceiveResult.reconnectJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.reconnectOrderID;
-		} else if (ConstantsBatchReceiveResult.waiveBatchJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.waiveBatchOrderID;
-		} else if (ConstantsBatchReceiveResult.writeOffJobType.equals(jobType)) {
-			return ConstantsBatchReceiveResult.writeOffOrderID;
+		if (ConstantsBusinessUtil.suspendJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.suspendOrderActionID;
+		} else if (ConstantsBusinessUtil.terminateJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.terminateOrderActionID;
+		} else if (ConstantsBusinessUtil.reconnectJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.reconnectOrderID;
+		} else if (ConstantsBusinessUtil.waiveBatchJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.waiveBatchOrderID;
+		} else if (ConstantsBusinessUtil.writeOffJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.writeOffOrderID;
 		} else {
 			return 0;
 		}
 	}
 
 	public static String getJobName(String jobType) {
-		if (ConstantsBatchReceiveResult.suspendJobType.equals(jobType)) {
+		if (ConstantsBusinessUtil.suspendJobType.equals(jobType)) {
 			return "Suspend Job";
-		} else if (ConstantsBatchReceiveResult.terminateJobType.equals(jobType)) {
+		} else if (ConstantsBusinessUtil.terminateJobType.equals(jobType)) {
 			return "Terminate Job";
-		} else if (ConstantsBatchReceiveResult.reconnectJobType.equals(jobType)) {
+		} else if (ConstantsBusinessUtil.reconnectJobType.equals(jobType)) {
 			return "Reconnect Job";
-		} else if (ConstantsBatchReceiveResult.waiveBatchJobType.equals(jobType)) {
+		} else if (ConstantsBusinessUtil.waiveBatchJobType.equals(jobType)) {
 			return "Waive Batch Job";
-		} else if (ConstantsBatchReceiveResult.writeOffJobType.equals(jobType)) {
+		} else if (ConstantsBusinessUtil.writeOffJobType.equals(jobType)) {
 			return "Write Off Job";
 		} else {
 			return "Other Job Undefine";

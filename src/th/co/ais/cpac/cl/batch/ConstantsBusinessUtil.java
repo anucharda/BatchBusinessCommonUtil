@@ -13,7 +13,7 @@ import th.co.ais.cpac.cl.template.database.DBConnectionPools;
  *
  * @author Sirirat
  */
-public class ConstantsBatchReceiveResult {
+public class ConstantsBusinessUtil {
 
 	public static int suspendOrderActionID = 10;//dummy 
 	public static int terminateOrderActionID = 4;

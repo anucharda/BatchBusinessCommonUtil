@@ -2,7 +2,7 @@ package th.co.ais.cpac.cl.batch.util;
 
 import java.math.BigDecimal;
 
-import th.co.ais.cpac.cl.batch.ConstantsBatchReceiveResult;
+import th.co.ais.cpac.cl.batch.ConstantsBusinessUtil;
 import th.co.ais.cpac.cl.batch.db.CLBatch;
 import th.co.ais.cpac.cl.batch.db.CLBatch.CLBatchPathInfo;
 import th.co.ais.cpac.cl.batch.db.CLBatch.CLBatchPathResponse;
@@ -22,17 +22,17 @@ public class BatchUtil {
 	public static  BigDecimal getBatchTypeId(String jobType) throws Exception{
 		BigDecimal batchTypeId=new BigDecimal("-99");
 		PropertiesReader reader = new PropertiesReader("th.co.ais.cpac.cl.batch.properties.resource","SystemConfigPath");
-		if(ConstantsBatchReceiveResult.suspendJobType.equals(jobType)){
+		if(ConstantsBusinessUtil.suspendJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("suspend.batchTypeID"));
-		}else if(ConstantsBatchReceiveResult.terminateJobType.equals(jobType)){
+		}else if(ConstantsBusinessUtil.terminateJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("terminate.batchTypeID"));
-		}else if(ConstantsBatchReceiveResult.reconnectJobType.equals(jobType)){
+		}else if(ConstantsBusinessUtil.reconnectJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("reconnect.batchTypeID"));
-		}else if(ConstantsBatchReceiveResult.waiveBatchJobType.equals(jobType)){
+		}else if(ConstantsBusinessUtil.waiveBatchJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("waiveBatch.batchTypeID"));
-		}else if(ConstantsBatchReceiveResult.writeOffJobType.equals(jobType)){
+		}else if(ConstantsBusinessUtil.writeOffJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("writeOff.batchTypeID"));
-		}else if(ConstantsBatchReceiveResult.blacklistJobType.equals(jobType)){
+		}else if(ConstantsBusinessUtil.blacklistJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("blacklist.batchTypeID"));
 		}
 		if(batchTypeId==new BigDecimal("-99")){
