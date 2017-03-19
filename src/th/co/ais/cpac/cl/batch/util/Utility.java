@@ -1,5 +1,6 @@
 package th.co.ais.cpac.cl.batch.util;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,6 +21,12 @@ public class Utility {
 			return ConstantsBusinessUtil.writeOffUsername;
 		} else if (ConstantsBusinessUtil.blacklistJobType.equals(jobType)) {
 			return ConstantsBusinessUtil.blacklistUsername;
+		}else if (ConstantsBusinessUtil.siebelActivityLogJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.siebelActivityLogUsername;
+		}else if (ConstantsBusinessUtil.siebelExemptLogJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.siebelExemptLogUsername;
+		}else if (ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)) {
+			return ConstantsBusinessUtil.ssfWriteOffLogUsername;
 		} else {
 			return "undefined";
 		}
@@ -50,8 +57,14 @@ public class Utility {
 			return "Reconnect Job";
 		} else if (ConstantsBusinessUtil.waiveBatchJobType.equals(jobType)) {
 			return "Waive Batch Job";
-		} else if (ConstantsBusinessUtil.writeOffJobType.equals(jobType)) {
-			return "Write Off Job";
+		} else if (ConstantsBusinessUtil.blacklistJobType.equals(jobType)) {
+			return "Blacklist Job";
+		}else if (ConstantsBusinessUtil.siebelActivityLogJobType.equals(jobType)) {
+			return "Siebel Activity Log Job";
+		}else if (ConstantsBusinessUtil.siebelExemptLogJobType.equals(jobType)) {
+			return "Siebel Exempt Log Job";
+		}else if (ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)) {
+			return "SFF WriteOff Log Job";
 		} else {
 			return "Other Job Undefine";
 		}
@@ -68,5 +81,9 @@ public class Utility {
 		}
 		return date;
 	}
-
+	public static String convertDateToString(Date dateTime,String format) {
+		DateFormat simpleFormat = new SimpleDateFormat(format);
+		String dateTimeString = simpleFormat.format(dateTime);
+		return dateTimeString;
+	}
 }

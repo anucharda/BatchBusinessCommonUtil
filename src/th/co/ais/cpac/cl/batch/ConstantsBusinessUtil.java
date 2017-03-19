@@ -28,6 +28,10 @@ public class ConstantsBusinessUtil {
 	public static String waiveBatchJobType="WA";
 	public static String writeOffJobType ="WO";
 	public static String blacklistJobType="BL";
+	public static String siebelActivityLogJobType="SA";
+	public static String siebelExemptLogJobType="SE";
+	public static String ssfWriteOffLogJobType="SW";
+	
 	public static int batchInprogressStatus = 1;
 	public static int batchReceiveStatus = 2;
 	public static int batchCompleteStatus = 3;
@@ -38,6 +42,11 @@ public class ConstantsBusinessUtil {
 	public static String waiveBatchUsername = "Waive Batch User";
 	public static String writeOffUsername = "Write Off Batch User";
 	public static String blacklistUsername = "Blacklist Batch User";
+	public static String siebelActivityLogUsername = "Siebel Activity Log User";
+	public static String siebelExemptLogUsername = "Siebel Exempt Log User";
+	public static String ssfWriteOffLogUsername = "SSF WriteOff Log User";
+	
+	
 	public static int actInprogressStatus = 3;
 	public static int actSuccessStatus = 4;
 	public static int actIncompleteStatus = 5;

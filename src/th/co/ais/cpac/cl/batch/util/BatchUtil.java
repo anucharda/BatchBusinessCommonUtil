@@ -3,21 +3,9 @@ package th.co.ais.cpac.cl.batch.util;
 import java.math.BigDecimal;
 
 import th.co.ais.cpac.cl.batch.ConstantsBusinessUtil;
-import th.co.ais.cpac.cl.batch.db.CLBatch;
-import th.co.ais.cpac.cl.batch.db.CLBatch.CLBatchPathInfo;
-import th.co.ais.cpac.cl.batch.db.CLBatch.CLBatchPathResponse;
-import th.co.ais.cpac.cl.common.Context;
 
 public class BatchUtil {
-	public static CLBatchPathInfo getBatchPath(Context context, BigDecimal batchTypeId,int environment)throws Exception{
-		CLBatch tbl = new CLBatch(context.getLogger());
-		CLBatchPathResponse result=tbl.getCLBatchPath(batchTypeId, environment);
-		
-		if(result==null ||result.getResponse()==null){
-			throw new Exception("Error Cannon Get Batch Path --> "+batchTypeId);
-		}
-		return result.getResponse();
-	}
+
 	
 	public static  BigDecimal getBatchTypeId(String jobType) throws Exception{
 		BigDecimal batchTypeId=new BigDecimal("-99");
@@ -34,6 +22,14 @@ public class BatchUtil {
 			batchTypeId= new BigDecimal(reader.get("writeOff.batchTypeID"));
 		}else if(ConstantsBusinessUtil.blacklistJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("blacklist.batchTypeID"));
+		}
+		else if(ConstantsBusinessUtil.siebelActivityLogJobType.equals(jobType)){
+			batchTypeId= new BigDecimal(reader.get("sb.activity.log.batchTypeID"));
+		}
+		else if(ConstantsBusinessUtil.siebelExemptLogJobType.equals(jobType)){
+			batchTypeId= new BigDecimal(reader.get("sb.exempt.log.batchTypeID"));
+		}else if(ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)){
+			batchTypeId= new BigDecimal(reader.get("sff.writeoff.log.batchTypeID"));
 		}
 		if(batchTypeId==new BigDecimal("-99")){
 			throw new Exception("Error Cannon Get Batch Type ID --> "+batchTypeId);
