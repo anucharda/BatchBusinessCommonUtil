@@ -28,8 +28,12 @@ public class BatchUtil {
 		}
 		else if(ConstantsBusinessUtil.siebelExemptLogJobType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("sb.exempt.log.batchTypeID"));
-		}else if(ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)){
-			batchTypeId= new BigDecimal(reader.get("sff.writeoff.log.batchTypeID"));
+		}
+		else if(ConstantsBusinessUtil.ssfccBlDlLogType.equals(jobType)){
+			batchTypeId= new BigDecimal(reader.get("ssfcc.exmpt.bldl.log.batchTypeID"));
+		}
+		else if(ConstantsBusinessUtil.ssfccExemptCreditLogType.equals(jobType)){
+			batchTypeId= new BigDecimal(reader.get("ssfcc.exempt.credit.limit.log.batchTypeID"));
 		}
 		if(batchTypeId==new BigDecimal("-99")){
 			throw new Exception("Error Cannon Get Batch Type ID --> "+batchTypeId);

@@ -27,6 +27,10 @@ public class Utility {
 			return ConstantsBusinessUtil.siebelExemptLogUsername;
 		}else if (ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)) {
 			return ConstantsBusinessUtil.ssfWriteOffLogUsername;
+		}else if (ConstantsBusinessUtil.ssfccBlDlLogType.equals(jobType)) {
+			return ConstantsBusinessUtil.ssfccBlDlLogUsername;
+		}else if (ConstantsBusinessUtil.ssfccExemptCreditLogType.equals(jobType)) {
+			return ConstantsBusinessUtil.ssfccExemptCreditLogUsername;
 		} else {
 			return "undefined";
 		}
@@ -65,6 +69,10 @@ public class Utility {
 			return "Siebel Exempt Log Job";
 		}else if (ConstantsBusinessUtil.ssfWriteOffLogJobType.equals(jobType)) {
 			return "SFF WriteOff Log Job";
+		}else if (ConstantsBusinessUtil.ssfccBlDlLogType.equals(jobType)) {
+			return "Exempt Blacklist/Deblacklist Log Job";
+		}else if (ConstantsBusinessUtil.ssfccExemptCreditLogType.equals(jobType)) {
+			return "Exempt Credit Log Job";
 		} else {
 			return "Other Job Undefine";
 		}
@@ -85,5 +93,9 @@ public class Utility {
 		DateFormat simpleFormat = new SimpleDateFormat(format);
 		String dateTimeString = simpleFormat.format(dateTime);
 		return dateTimeString;
+	}
+	public static String generateSeqNo(int i){
+		return String.format("%010d", i);
+		
 	}
 }

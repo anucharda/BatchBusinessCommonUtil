@@ -31,6 +31,8 @@ public class ConstantsBusinessUtil {
 	public static String siebelActivityLogJobType="SA";
 	public static String siebelExemptLogJobType="SE";
 	public static String ssfWriteOffLogJobType="SW";
+	public static String ssfccBlDlLogType="DB";
+	public static String ssfccExemptCreditLogType="EC";
 	
 	public static int batchInprogressStatus = 1;
 	public static int batchReceiveStatus = 2;
@@ -45,7 +47,8 @@ public class ConstantsBusinessUtil {
 	public static String siebelActivityLogUsername = "Siebel Activity Log User";
 	public static String siebelExemptLogUsername = "Siebel Exempt Log User";
 	public static String ssfWriteOffLogUsername = "SSF WriteOff Log User";
-	
+	public static String ssfccBlDlLogUsername="Exempt Blacklist/Deblacklist";
+	public static String ssfccExemptCreditLogUsername="Exempt Credit Log";
 	
 	public static int actInprogressStatus = 3;
 	public static int actSuccessStatus = 4;
