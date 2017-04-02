@@ -96,6 +96,5 @@ public class Utility {
 	}
 	public static String generateSeqNo(int i){
 		return String.format("%010d", i);
-		
 	}
 }
