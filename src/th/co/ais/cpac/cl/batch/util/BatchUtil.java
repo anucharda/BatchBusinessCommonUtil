@@ -30,7 +30,7 @@ public class BatchUtil {
 			batchTypeId= new BigDecimal(reader.get("sb.exempt.log.batchTypeID"));
 		}
 		else if(ConstantsBusinessUtil.ssfccBlDlLogType.equals(jobType)){
-			batchTypeId= new BigDecimal(reader.get("ssfcc.exmpt.bldl.log.batchTypeID"));
+			batchTypeId= new BigDecimal(reader.get("ssfcc.exempt.bldl.log.batchTypeID"));
 		}
 		else if(ConstantsBusinessUtil.ssfccExemptCreditLogType.equals(jobType)){
 			batchTypeId= new BigDecimal(reader.get("ssfcc.exempt.credit.limit.log.batchTypeID"));
