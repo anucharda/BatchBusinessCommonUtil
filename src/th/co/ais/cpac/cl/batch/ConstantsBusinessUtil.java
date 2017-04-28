@@ -38,17 +38,17 @@ public class ConstantsBusinessUtil {
 	public static int batchReceiveStatus = 2;
 	public static int batchCompleteStatus = 3;
 	
-	public static String suspendUsername = "Suspend User";
-	public static String terminateUsername = "Terminate User";
-	public static String reconnectUsername = "Reconnect User";
-	public static String waiveBatchUsername = "Waive Batch User";
-	public static String writeOffUsername = "Write Off Batch User";
-	public static String blacklistUsername = "Blacklist Batch User";
-	public static String siebelActivityLogUsername = "Siebel Activity Log User";
-	public static String siebelExemptLogUsername = "Siebel Exempt Log User";
-	public static String ssfWriteOffLogUsername = "SSF WriteOff Log User";
-	public static String ssfccBlDlLogUsername="Exempt Blacklist/Deblacklist";
-	public static String ssfccExemptCreditLogUsername="Exempt Credit Log";
+	public static String suspendUsername = "CLSYS";
+	public static String terminateUsername = "CLSYS";
+	public static String reconnectUsername = "CLSYS";
+	public static String waiveBatchUsername = "CLSYS";
+	public static String writeOffUsername = "CLSYS";
+	public static String blacklistUsername = "CLSYS";
+	public static String siebelActivityLogUsername = "CLSYS";
+	public static String siebelExemptLogUsername = "CLSYS";
+	public static String ssfWriteOffLogUsername = "CLSYS";
+	public static String ssfccBlDlLogUsername="CLSYS";
+	public static String ssfccExemptCreditLogUsername="CLSYS";
 	
 	public static int actInprogressStatus = 3;
 	public static int actSuccessStatus = 4;
